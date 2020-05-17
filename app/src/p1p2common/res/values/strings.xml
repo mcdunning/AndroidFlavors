@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="platform1_specific_dialog">This text is only visible when the selected flavor is platform 1</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flavor_name_title">Platform 3</string>
+    <string name="text_view_1_label">Value 1</string>
+    <string name="text_view_2_label">Value 2</string>
+</resources>

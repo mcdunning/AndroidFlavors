@@ -3,10 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
 
-
     defaultConfig {
         applicationId "com.flavorspoc"
-        minSdkVersion 28
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -19,6 +18,39 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    flavorDimensions 'platform'
+    productFlavors {
+        platform1 {
+            dimension = 'platform'
+            targetSdkVersion 28
+            minSdkVersion 24
+        }
+        platform2 {
+            dimension = 'platform'
+            targetSdkVersion 28
+            minSdkVersion 24
+        }
+        platform3 {
+            dimension = 'platform'
+            targetSdkVersion 28
+            minSdkVersion 24
+        }
+    }
+
+    sourceSets {
+
+        platform1 {
+            java.srcDirs = ['src/platform1/', 'src/p1p2common/']
+            res.srcDirs = ['src/platform1/res', 'src/p1p2common/res']
+        }
+
+        platform2 {
+            java.srcDirs = ['src/platform2/', 'src/p1p2common/']
+            res.srcDirs = ['src/platform2/res', 'src/p1p2common/res']
+        }
+
     }
 
 }
