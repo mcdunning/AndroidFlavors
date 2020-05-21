@@ -22,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener speedClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            final NumberpadModel numberpadModel = new NumberpadModel(0.0f, 25.0f, 2);
-            Numberpad numPad = new Numberpad(mainView, numberpadModel, cl -> speed.setText(Float.toString(numberpadModel.getValue())));
+            final NumberpadModel numberpadModel = new NumberpadModel(Float.parseFloat(speed.getText().toString()),0.0f, 25.0f, 2);
+            Numberpad numPad = new Numberpad(mainView.getContext());
+            numPad.init(mainView,
+                    numberpadModel,
+                    cl -> {speed.setText(Float.toString(numberpadModel.getValue()));
+                           numPad.hide();}
+                    );
             numPad.show();
         }
     };
@@ -50,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
         speed.setText("0.0");
         speed.setOnClickListener(speedClickListener);
         submit.setOnClickListener(v -> {
-            Toast toast = Toast.makeText(MainActivity.this.getApplicationContext(), getString(R.string.submit_toast_message, getString(R.string.flavor_name_title), speed.getText().toString()), Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(MainActivity.this.getApplicationContext(),
+                    getString(R.string.submit_toast_message,
+                            getString(R.string.flavor_name_title),
+                            speed.getText().toString()),
+                    Toast.LENGTH_LONG);
             toast.show();
         });
     }

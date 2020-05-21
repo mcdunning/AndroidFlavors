@@ -6,8 +6,8 @@ public class NumberpadModel {
     private float max;
     private int precision;
 
-    public NumberpadModel(float min, float max, int precision) {
-        this.value = 0.0f;
+    public NumberpadModel(float value, float min, float max, int precision) {
+        this.value = value;
         this.min = min;
         this.max = max;
         this.precision = precision;
