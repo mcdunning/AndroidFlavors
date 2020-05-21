@@ -4,6 +4,7 @@
     <string name="flavor_name_title">Common Flavor</string>
     <string name="submit">SUBMIT</string>
 
+    <!-- NumberPad Widget Specific Values -->
     <string name="nine">9</string>
     <string name="eight">8</string>
     <string name="seven">7</string>
@@ -15,4 +16,16 @@
     <string name="one">1</string>
     <string name="zero">0</string>
     <string name="decimal_point">.</string>
+
+    <!-- Units -->
+    <string name="speed_imperial_uc">MPH</string>
+    <string name="speed_imperial_lc">mph</string>
+    <string name="weight_imperial_uc">LBS</string>
+    <string name="weight_imperial_lc">lbs</string>
+
+    <!-- Parameters -->
+    <string name="weight_uc">WEIGHT</string>
+    <string name="weight_lc">weight</string>
+    <string name="speed_uc">SPEED</string>
+    <string name="speed_lc">speed</string>
 </resources>

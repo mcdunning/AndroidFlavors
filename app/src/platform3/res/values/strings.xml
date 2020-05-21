@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="flavor_name_title">Platform 3</string>
-    <string name="text_view_1_label">Value 1</string>
-    <string name="text_view_2_label">Value 2</string>
+    <string name="submit_toast_message">This is %1$s!\nThe entered %2$s is %3$s\nThe entered %4$s is %5$s</string>
 </resources>
