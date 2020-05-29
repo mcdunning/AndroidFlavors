@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pf_yellow">#FFFFDB00</color>
+    <color name="pf_dark_grey">#54000000</color>
+    <color name="pf_dark_grey_stat_widget_background">#80000000</color>
+    <color name="pf_black">#A8000000</color>
+    <color name="pf_grey">#FFDBD2E1</color>
+    <color name="pf_white_title">#B3FFFFFF</color>
+    <color name="pf_input_grey">#FF666666</color>
+    <color name="pf_purple_cell_title">#26000000</color>
+    <color name="pf_purple">#401E5B</color>
+    <color name="pf_purple_gradient_start">#FF5B2B81</color>
+    <color name="pf_purple_gradient_end">#FF9E57AB</color>
+    <color name="pf_red">#FFFF0000</color>
+    <color name="pf_transparent">#00000000</color>
+</resources>

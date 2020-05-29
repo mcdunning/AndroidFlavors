@@ -99,7 +99,7 @@
         android:id="@+id/submit"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/submit"
+        android:text="@string/submit_uc"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/text_view_1_value"
         app:layout_constraintRight_toRightOf="parent"

@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.flavorspoc.BuildConfig;
 import com.flavorspoc.R;
-import com.flavorspoc.widget.Numberpad;
+import com.flavorspoc.widget.NumberPad;
 import com.flavorspoc.widget.NumberpadModel;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             TextView textView = (TextView) v;
-            final NumberpadModel numberpadModel = new NumberpadModel(Float.parseFloat(speed.getText().toString()),0.0f, 25.0f, 2);
-            Numberpad numPad = new Numberpad(mainView.getContext());
+            final NumberpadModel numberpadModel = new NumberpadModel(Float.parseFloat(speed.getText().toString()),0.0f, 25.0f, 2, true, true, true);
+            NumberPad numPad = new NumberPad(mainView.getContext());
             numPad.init(mainView,
                     numberpadModel,
                     cl -> {textView.setText(Float.toString(numberpadModel.getValue()));

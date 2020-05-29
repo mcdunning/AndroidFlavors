@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Number Pad -->
+        <item name="numberpad_main_view">@style/numberpad_main_view</item>
+        <item name="numberpad_value">@style/numberpad_value</item>
+        <item name="numberpad_backspace">@style/numberpad_backspace</item>
+        <item name="numberpad_submit">@style/numberpad_submit</item>
+        <item name="button">@style/numberpad_button</item>
+        <item name="button_image_color">@color/cb_blue_50</item>
+        <item name="numberpad_container_color">@color/cb_orange_50</item>
+        <item name="numberpad_container_corner_radius">@dimen/rounded_container_radius</item>
+        <item name="numberpad_value_background">@color/cb_blue_50</item>
+        <item name="numberpad_value_corner_radius">@dimen/rounded_container_radius</item>
+        <item name="numberpad_button_color">@color/cb_orange</item>
+        <item name="numberpad_button_pressed_color">@color/cb_blue</item>
+        <item name="numberpad_button_selected_color">@color/cb_blue</item>
+    </style>
+</resources>

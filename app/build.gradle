@@ -5,12 +5,13 @@ android {
 
     defaultConfig {
         applicationId "com.flavorspoc"
-        minSdkVersion 24
+        minSdkVersion 18
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -25,17 +26,17 @@ android {
         platform1 {
             dimension = 'platform'
             targetSdkVersion 28
-            minSdkVersion 24
+            minSdkVersion 18
         }
         platform2 {
             dimension = 'platform'
             targetSdkVersion 28
-            minSdkVersion 24
+            minSdkVersion 18
         }
         platform3 {
             dimension = 'platform'
             targetSdkVersion 28
-            minSdkVersion 24
+            minSdkVersion 18
         }
     }
 
@@ -67,4 +68,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.android.support:appcompat-v7:28.2.0'
 }

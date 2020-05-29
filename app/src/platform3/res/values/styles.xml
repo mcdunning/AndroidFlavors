@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- =============================================== -->
+    <!-- Activity Style -->
+    <!-- =============================================== -->
+    <style name="activity_heading_text">
+        <item name="android:textColor">@color/pf_white_title</item>
+        <item name="android:fontFamily">@font/knockout_htf70_full_welter_weight</item>
+        <item name="android:textSize">@dimen/activity_heading_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="activity_subheading_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/knockout_htf50_welter_weight</item>
+        <item name="android:textSize">@dimen/activity_subheading_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="activity_button">
+        <item name="android:background">@drawable/numberpad_button_background</item>
+        <item name="android:layout_margin">@dimen/numberpad_element_margin</item>
+        <item name="android:textColor">@color/pf_dark_grey</item>
+        <item name="fontFamily">@font/rockwell_std_bold</item>
+        <item name="android:textSize">@dimen/numberpad_num_key_text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

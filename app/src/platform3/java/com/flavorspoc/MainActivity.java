@@ -1,6 +1,7 @@
 package com.flavorspoc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.flavorspoc.widget.Numberpad;
+import com.flavorspoc.widget.NumberPad;
 import com.flavorspoc.widget.NumberpadModel;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
             final NumberpadModel numberpadModel;
             switch (v.getId()) {
                 case R.id.text_view_1_value:
-                    numberpadModel = new NumberpadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 25.0f, 2);
+                    numberpadModel = new NumberpadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 25.0f, 2, false, false, false);
                     break;
                 case R.id.text_view_2_value:
-                    numberpadModel = new NumberpadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 250.0f, 0);
+                    numberpadModel = new NumberpadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 250.0f, 0, false, true, true);
                     break;
                 default:
                     numberpadModel = null;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (numberpadModel != null) {
-                Numberpad numPad = new Numberpad(mainView.getContext());
+                NumberPad numPad = new NumberPad(mainView.getContext());
                 numPad.init(mainView,
                         numberpadModel,
                         cl -> {
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_main);
 
         mainView = findViewById(R.id.main_view);
