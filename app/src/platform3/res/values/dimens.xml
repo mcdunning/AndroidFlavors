@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Activity -->
-    <dimen name="activity_heading_text_size">160sp</dimen>
-    <dimen name="activity_subheading_text_size">48sp</dimen>
 
-    <!-- Number Pad -->
-    <dimen name="numberpad_value_text_size">50sp</dimen>
-    <dimen name="numberpad_submit_key_text_size">20sp</dimen>
-    <dimen name="numberpad_backspace_key_text_size">20sp</dimen>
-    <dimen name="numberpad_num_key_text_size">30sp</dimen>
-    <dimen name="numberpad_element_margin">3dp</dimen>
-    <dimen name="numberpad_value_padding">20dp</dimen>
 </resources>

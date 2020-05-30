@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list
 xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:drawable="@drawable/numberpad_button_background"/>
+<item android:drawable="@drawable/number_pad_button_background"/>
 <item
     android:drawable="@drawable/ic_button_key_confirm"
     android:gravity="center_horizontal|center_vertical"

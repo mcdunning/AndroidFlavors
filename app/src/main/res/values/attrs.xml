@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CommonAttrs">
+        <attr name="gradient_background_start_color" format="reference" />
+        <attr name="gradient_background_end_color" format="reference" />
+
         <attr name="rounded_container_fill_color" format="reference" />
         <attr name="rounded_container_radius" format="reference" />
+
         <attr name="button_image_color" format="reference" />
         <attr name="button_background" format="reference" />
+        <attr name="button_corner_radius" format="reference" />
         <attr name="button" format="reference" />
+
     </declare-styleable>
 
     <!-- Activity Attrs -->

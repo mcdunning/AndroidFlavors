@@ -5,19 +5,28 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+        <item name="gradient_background_start_color">@color/cb_blue</item>
+        <item name="gradient_background_end_color">@color/cb_blue_75</item>
+
         <!-- Number Pad -->
-        <item name="numberpad_main_view">@style/numberpad_main_view</item>
-        <item name="numberpad_value">@style/numberpad_value</item>
-        <item name="numberpad_backspace">@style/numberpad_backspace</item>
-        <item name="numberpad_submit">@style/numberpad_submit</item>
-        <item name="button">@style/numberpad_button</item>
-        <item name="button_image_color">@color/cb_blue_50</item>
-        <item name="numberpad_container_color">@color/cb_orange_50</item>
-        <item name="numberpad_container_corner_radius">@dimen/rounded_container_radius</item>
-        <item name="numberpad_value_background">@color/cb_blue_50</item>
-        <item name="numberpad_value_corner_radius">@dimen/rounded_container_radius</item>
-        <item name="numberpad_button_color">@color/cb_orange</item>
-        <item name="numberpad_button_pressed_color">@color/cb_blue</item>
-        <item name="numberpad_button_selected_color">@color/cb_blue</item>
+        <item name="number_pad_main_view">@style/number_pad_main_view</item>
+
+        <item name="number_pad_container_color">@color/cb_blue</item>
+        <item name="number_pad_container_corner_radius">@dimen/rounded_container_radius</item>
+
+        <item name="number_pad_value">@style/number_pad_value</item>
+        <item name="number_pad_value_background">@color/cb_orange_75</item>
+        <item name="number_pad_value_corner_radius">@dimen/rounded_container_radius</item>
+
+        <item name="number_pad_backspace">@style/number_pad_backspace</item>
+        <item name="number_pad_submit">@style/number_pad_submit</item>
+
+        <item name="number_pad_button_color">@color/cb_orange</item>
+        <item name="number_pad_button_pressed_color">@color/cb_blue</item>
+        <item name="number_pad_button_selected_color">@color/cb_blue</item>
+
+        <item name="number_pad_button">@style/number_pad_button</item>
+        <item name="number_pad_button_image_background_color">@color/cb_orange_75</item>
+        <item name="number_pad_button_image_color">@color/white</item>
     </style>
 </resources>

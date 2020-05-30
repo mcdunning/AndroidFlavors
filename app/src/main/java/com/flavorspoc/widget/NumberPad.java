@@ -27,7 +27,7 @@ public class NumberPad extends ConstraintLayout {
     private float paddingTop = 0.0f;
     private float paddingStart = 0.0f;
 
-    private NumberpadModel numberpadModel;
+    private NumberPadModel numberPadModel;
     private View.OnClickListener onConfirm;
 
     private ConstraintLayout mainView;
@@ -49,7 +49,7 @@ public class NumberPad extends ConstraintLayout {
     // boolean flag to replace the current value with the value of the first button clicked
     private Button submit;
     private boolean handleFirstButtonClick = true;
-    private View.OnClickListener numberpadButtonClickListener = new View.OnClickListener() {
+    private View.OnClickListener numberPadButtonClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
@@ -67,13 +67,13 @@ public class NumberPad extends ConstraintLayout {
                     // Fall through let the number press handler take care of this input
                     handleNumberPress(getNumKeyStringId(v.getId()));
                     break;
-                case R.id.submit:
+                case R.id.number_pad_submit:
                     if (value.getText().length() != 0) {
-                        numberpadModel.setValue(Float.parseFloat(value.getText().toString()));
+                        numberPadModel.setValue(Float.parseFloat(value.getText().toString()));
                     }
                     onConfirm.onClick(v);
                     break;
-                case R.id.backspace:
+                case R.id.number_pad_backspace:
                     if (handleFirstButtonClick) {
                         handleFirstButtonClick = false;
                     }
@@ -103,12 +103,12 @@ public class NumberPad extends ConstraintLayout {
     public NumberPad(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        LayoutInflater.from(context).inflate(R.layout.activity_numerpad, this, true);
+        LayoutInflater.from(context).inflate(R.layout.activity_number_pad, this, true);
 
         mainView = findViewById(R.id.main_view);
-        container = findViewById(R.id.numberpad_container);
-        value = findViewById(R.id.value);
-        backspace = findViewById(R.id.backspace);
+        container = findViewById(R.id.number_pad_container);
+        value = findViewById(R.id.number_pad_value);
+        backspace = findViewById(R.id.number_pad_backspace);
         r23 = findViewById(R.id.r23);
         r22 = findViewById(R.id.r22);
         r21 = findViewById(R.id.r21);
@@ -120,15 +120,15 @@ public class NumberPad extends ConstraintLayout {
         r41 = findViewById(R.id.r41);
         zero = findViewById(R.id.zero);
         decimal_point = findViewById(R.id.decimal_point);
-        submit = findViewById(R.id.submit);
+        submit = findViewById(R.id.number_pad_submit);
     }
 
-    public void init (final View anchor, final NumberpadModel numberpadModel, final View.OnClickListener onConfirm) {
+    public void init (final View anchor, final NumberPadModel numberPadModel, final View.OnClickListener onConfirm) {
         this.anchor = anchor;
-        this.numberpadModel = numberpadModel;
+        this.numberPadModel = numberPadModel;
         this.onConfirm = onConfirm;
 
-        applyStyleToNumberpad();
+        applyStyleToNumberPad();
     }
 
     /**
@@ -137,26 +137,26 @@ public class NumberPad extends ConstraintLayout {
     @SuppressLint("ClickableViewAccessibility")
     public void show() {
         // Assign the listeners to the number pad keys
-        backspace.setOnClickListener(numberpadButtonClickListener);
-        r23.setOnClickListener(numberpadButtonClickListener);
-        r22.setOnClickListener(numberpadButtonClickListener);
-        r21.setOnClickListener(numberpadButtonClickListener);
-        r33.setOnClickListener(numberpadButtonClickListener);
-        r32.setOnClickListener(numberpadButtonClickListener);
-        r31.setOnClickListener(numberpadButtonClickListener);
-        r43.setOnClickListener(numberpadButtonClickListener);
-        r42.setOnClickListener(numberpadButtonClickListener);
-        r41.setOnClickListener(numberpadButtonClickListener);
-        zero.setOnClickListener(numberpadButtonClickListener);
-        decimal_point.setOnClickListener(numberpadButtonClickListener);
-        submit.setOnClickListener(numberpadButtonClickListener);
+        backspace.setOnClickListener(numberPadButtonClickListener);
+        r23.setOnClickListener(numberPadButtonClickListener);
+        r22.setOnClickListener(numberPadButtonClickListener);
+        r21.setOnClickListener(numberPadButtonClickListener);
+        r33.setOnClickListener(numberPadButtonClickListener);
+        r32.setOnClickListener(numberPadButtonClickListener);
+        r31.setOnClickListener(numberPadButtonClickListener);
+        r43.setOnClickListener(numberPadButtonClickListener);
+        r42.setOnClickListener(numberPadButtonClickListener);
+        r41.setOnClickListener(numberPadButtonClickListener);
+        zero.setOnClickListener(numberPadButtonClickListener);
+        decimal_point.setOnClickListener(numberPadButtonClickListener);
+        submit.setOnClickListener(numberPadButtonClickListener);
 
         mainView.setOnTouchListener((v1, event) -> {
             hide();
             return true;
         });
 
-        value.setText(Float.toString(numberpadModel.getValue()));
+        value.setText(Float.toString(numberPadModel.getValue()));
 
         // Initialize the dialog box preparing for the show animation.
         mainView.setAlpha(0);
@@ -320,35 +320,35 @@ public class NumberPad extends ConstraintLayout {
         submit = null;
 
         anchor = null;
-        numberpadModel = null;
+        numberPadModel = null;
         onConfirm = null;
     }
 
-    private void applyStyleToNumberpad() {
+    private void applyStyleToNumberPad() {
         GradientDrawable currentDrawable;
 
-        // Style the numberpad container
+        // Style the number pad container
         container.setBackgroundResource(R.drawable.rounded_container);
         currentDrawable = (GradientDrawable) container.getBackground();
         currentDrawable.mutate();
-        currentDrawable.setColor(getResources().getColor(resolveAttributeId(R.attr.numberpad_container_color)));
-        currentDrawable.setCornerRadius(getResources().getDimension(resolveAttributeId(R.attr.numberpad_container_corner_radius)));
+        currentDrawable.setColor(getResources().getColor(resolveAttributeId(R.attr.number_pad_container_color)));
+        currentDrawable.setCornerRadius(getResources().getDimension(resolveAttributeId(R.attr.number_pad_container_corner_radius)));
 
         // style the value text view
         value.setBackgroundResource(R.drawable.rounded_container);
         currentDrawable = (GradientDrawable) value.getBackground();
         currentDrawable.mutate();
-        currentDrawable.setColor(getResources().getColor(resolveAttributeId(R.attr.numberpad_value_background)));
-        currentDrawable.setCornerRadius(getResources().getDimension(resolveAttributeId(R.attr.numberpad_value_corner_radius)));
+        currentDrawable.setColor(getResources().getColor(resolveAttributeId(R.attr.number_pad_value_background)));
+        currentDrawable.setCornerRadius(getResources().getDimension(resolveAttributeId(R.attr.number_pad_value_corner_radius)));
 
         // Set the text of the number pad keys
-        if (!numberpadModel.useImageForBackspace()) {
-            backspace.setBackground(getResources().getDrawable(R.drawable.numberpad_button_background));
+        if (!numberPadModel.useImageForBackspace()) {
+            backspace.setBackgroundResource(R.drawable.number_pad_button_background);
             backspace.setText(getResources().getString(R.string.backspace));
         }
 
-        if (!numberpadModel.useImageForSubmit()) {
-            submit.setBackground(getResources().getDrawable(R.drawable.numberpad_button_background));
+        if (!numberPadModel.useImageForSubmit()) {
+            submit.setBackgroundResource(R.drawable.number_pad_button_background);
             submit.setText(getResources().getString(R.string.submit));
         }
 
@@ -396,9 +396,9 @@ public class NumberPad extends ConstraintLayout {
 
     /**
      * Checks to see if the new value generated by the key press is valid based on the passed in model
-     * @param numberpadKeyId the string id of the key that was pressed
+     * @param numberPadKeyId the string id of the key that was pressed
      */
-    private void handleNumberPress(int numberpadKeyId) {
+    private void handleNumberPress(int numberPadKeyId) {
         boolean updateValue = false;
         StringBuilder newValue;
         if (handleFirstButtonClick) {
@@ -408,18 +408,18 @@ public class NumberPad extends ConstraintLayout {
             newValue = new StringBuilder(value.getText().toString());
         }
         
-        String passedValue = getResources().getString(numberpadKeyId);
-        if (R.string.decimal_point == numberpadKeyId) {
+        String passedValue = getResources().getString(numberPadKeyId);
+        if (R.string.decimal_point == numberPadKeyId) {
             if (!newValue.toString().contains(passedValue)) {
                 newValue.append(passedValue);
                 updateValue = true;
             }
         } else {
             int decimalPlaceIndex = newValue.toString().indexOf(getResources().getString(R.string.decimal_point));
-            if (decimalPlaceIndex == -1 || (newValue.toString().length() - decimalPlaceIndex -1) < numberpadModel.getPrecision()) {
+            if (decimalPlaceIndex == -1 || (newValue.toString().length() - decimalPlaceIndex -1) < numberPadModel.getPrecision()) {
                 newValue.append(passedValue);
                 float newFloatValue = Float.parseFloat(newValue.toString());
-                updateValue = newFloatValue <= numberpadModel.getMax() && newFloatValue >= numberpadModel.getMin();
+                updateValue = newFloatValue <= numberPadModel.getMax() && newFloatValue >= numberPadModel.getMin();
             }
         }
 
@@ -438,13 +438,13 @@ public class NumberPad extends ConstraintLayout {
         int numberKeyValue;
         switch(keyId) {
             case R.id.r23:
-                numberKeyValue = numberpadModel.isStartWithOne() ? R.string.three : R.string.nine;
+                numberKeyValue = numberPadModel.isStartWithOne() ? R.string.three : R.string.nine;
                 break;
             case R.id.r22:
-                numberKeyValue = numberpadModel.isStartWithOne() ? R.string.two : R.string.eight;
+                numberKeyValue = numberPadModel.isStartWithOne() ? R.string.two : R.string.eight;
                 break;
             case R.id.r21:
-                numberKeyValue = numberpadModel.isStartWithOne() ? R.string.one : R.string.seven;
+                numberKeyValue = numberPadModel.isStartWithOne() ? R.string.one : R.string.seven;
                 break;
             case R.id.r33:
                 numberKeyValue = R.string.six;
@@ -456,13 +456,13 @@ public class NumberPad extends ConstraintLayout {
                 numberKeyValue = R.string.five;
                 break;
             case R.id.r43:
-                numberKeyValue = numberpadModel.isStartWithOne() ? R.string.nine : R.string.three;
+                numberKeyValue = numberPadModel.isStartWithOne() ? R.string.nine : R.string.three;
                 break;
             case R.id.r42:
-                numberKeyValue = numberpadModel.isStartWithOne() ? R.string.eight : R.string.two;
+                numberKeyValue = numberPadModel.isStartWithOne() ? R.string.eight : R.string.two;
                 break;
             case R.id.r41:
-                numberKeyValue = numberpadModel.isStartWithOne() ? R.string.seven : R.string.one;
+                numberKeyValue = numberPadModel.isStartWithOne() ? R.string.seven : R.string.one;
                 break;
             case R.id.zero:
                 numberKeyValue = R.string.zero;

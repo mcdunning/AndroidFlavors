@@ -1,6 +1,6 @@
 package com.flavorspoc.widget;
 
-public class NumberpadModel {
+public class NumberPadModel {
     private float value;
     private float min;
     private float max;
@@ -10,7 +10,7 @@ public class NumberpadModel {
     private boolean useImageForBackspace;
     private boolean useImageForSubmit;
 
-    public NumberpadModel(float value, float min, float max, int precision, boolean startWithOne, boolean useImageForBackspace, boolean useImageForSubmit) {
+    public NumberPadModel(float value, float min, float max, int precision, boolean startWithOne, boolean useImageForBackspace, boolean useImageForSubmit) {
         this.value = value;
         this.min = min;
         this.max = max;

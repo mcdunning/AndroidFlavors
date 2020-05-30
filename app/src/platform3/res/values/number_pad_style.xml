@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="numberpad_main_view">
+    <style name="number_pad_main_view">
         <item name="android:background">@drawable/gradient_background</item>
     </style>
 
-    <style name="numberpad_value">
+    <style name="number_pad_value">
         <item name="android:layout_margin">3dp</item>
         <item name="android:textColor">@color/pf_yellow</item>
         <item name="android:fontFamily">@font/rockwell_std_bold</item>
@@ -13,18 +13,18 @@
         <item name="android:gravity">center|end</item>
     </style>
 
-    <style name="numberpad_backspace" parent="numberpad_button" >
-        <item name="android:background">@drawable/numberpad_button_delete</item>
+    <style name="number_pad_backspace" parent="number_pad_button" >
+        <item name="android:background">@drawable/number_pad_button_delete</item>
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="numberpad_submit" parent="numberpad_button">
-        <item name="android:background">@drawable/numberpad_button_confirm</item>
+    <style name="number_pad_submit" parent="number_pad_button">
+        <item name="android:background">@drawable/number_pad_button_confirm</item>
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="numberpad_button">
-        <item name="android:background">@drawable/numberpad_button_background</item>
+    <style name="number_pad_button">
+        <item name="android:background">@drawable/number_pad_button_background</item>
         <item name="android:layout_margin">3dp</item>
         <item name="android:textColor">@color/pf_dark_grey</item>
         <item name="fontFamily">@font/rockwell_std_bold</item>

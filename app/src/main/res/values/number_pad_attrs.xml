@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="NumberPad">
-        <attr name="numberpad_main_view" format="reference" />
-        <attr name="numberpad_container_color" format="reference" />
-        <attr name="numberpad_container_corner_radius" format="reference" />
-        <attr name="numberpad_value" format="reference" />
-        <attr name="numberpad_value_background" format="reference" />
-        <attr name="numberpad_value_corner_radius" format="reference" />
-        <attr name="numberpad_backspace" format="reference" />
-        <attr name="numberpad_submit" format="reference" />
-        <attr name="numberpad_button_selected_color" format="reference" />
-        <attr name="numberpad_button_pressed_color" format="reference" />
-        <attr name="numberpad_button_color" format="reference" />
-        <attr name="button" />
-        <attr name="button_background" />
-        <attr name="button_image_color" />
+        <attr name="number_pad_main_view" format="reference" />
+        <attr name="number_pad_container_color" format="reference" />
+        <attr name="number_pad_container_corner_radius" format="reference" />
+        <attr name="number_pad_value" format="reference" />
+        <attr name="number_pad_value_background" format="reference" />
+        <attr name="number_pad_value_corner_radius" format="reference" />
+        <attr name="number_pad_backspace" format="reference" />
+        <attr name="number_pad_submit" format="reference" />
+        <attr name="number_pad_button_selected_color" format="reference" />
+        <attr name="number_pad_button_pressed_color" format="reference" />
+        <attr name="number_pad_button_color" format="reference" />
+        <attr name="number_pad_button" format="reference" />
+        <attr name="number_pad_button_image_background_color" format="reference" />
+        <attr name="number_pad_button_image_color" format="reference" />
 
     </declare-styleable>
 </resources>
