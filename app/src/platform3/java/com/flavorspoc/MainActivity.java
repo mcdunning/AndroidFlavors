@@ -1,6 +1,7 @@
 package com.flavorspoc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -9,8 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.flavorspoc.widget.Numberpad;
-import com.flavorspoc.widget.NumberpadModel;
+import com.flavorspoc.widget.NumberPad;
+import com.flavorspoc.widget.NumberPadModel;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = this.getClass().getCanonicalName();
@@ -24,28 +25,28 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             final TextView textView = (TextView) v;
-            final NumberpadModel numberpadModel;
+            final NumberPadModel numberPadModel;
             switch (v.getId()) {
                 case R.id.text_view_1_value:
-                    numberpadModel = new NumberpadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 25.0f, 2);
+                    numberPadModel = new NumberPadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 25.0f, 2, false, false, false);
                     break;
                 case R.id.text_view_2_value:
-                    numberpadModel = new NumberpadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 250.0f, 0);
+                    numberPadModel = new NumberPadModel(Float.parseFloat(textView.getText().toString()), 0.0f, 250.0f, 0, false, true, true);
                     break;
                 default:
-                    numberpadModel = null;
+                    numberPadModel = null;
                     Log.e(TAG, "The selected view is not supported");
             }
 
-            if (numberpadModel != null) {
-                Numberpad numPad = new Numberpad(mainView.getContext());
+            if (numberPadModel != null) {
+                NumberPad numPad = new NumberPad(mainView.getContext());
                 numPad.init(mainView,
-                        numberpadModel,
+                        numberPadModel,
                         cl -> {
                             if (R.id.text_view_2_value == textView.getId()) {
-                                textView.setText(Integer.toString((int) numberpadModel.getValue()));
+                                textView.setText(Integer.toString((int) numberPadModel.getValue()));
                             } else {
-                                textView.setText(Float.toString(numberpadModel.getValue()));
+                                textView.setText(Float.toString(numberPadModel.getValue()));
                             }
                             numPad.hide();
                         }
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_main);
 
         mainView = findViewById(R.id.main_view);

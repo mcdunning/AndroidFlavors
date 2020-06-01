@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Platform3AppTheme" parent="BaseAppTheme">
+        <item name="android:windowBackground">@drawable/gradient_background</item>
+        <item name="android:textColor">@color/white</item>
+
+        <item name="gradient_background_start_color">@color/pf_purple_gradient_start</item>
+        <item name="gradient_background_end_color">@color/pf_purple_gradient_end</item>
+
+
+        <!-- Number Pad -->
+        <item name="number_pad_main_view">@style/number_pad_main_view</item>
+
+        <item name="number_pad_container_color">@color/pf_purple</item>
+        <item name="number_pad_container_corner_radius">@dimen/rounded_container_radius</item>
+
+        <item name="number_pad_value">@style/number_pad_value</item>
+        <item name="number_pad_value_background">@color/pf_input_grey</item>
+        <item name="number_pad_value_corner_radius">@dimen/rounded_container_radius</item>
+
+        <item name="number_pad_backspace">@style/number_pad_backspace</item>
+        <item name="number_pad_submit">@style/number_pad_submit</item>
+
+        <item name="number_pad_button_color">@color/white</item>
+        <item name="number_pad_button_pressed_color">@color/pf_purple</item>
+        <item name="number_pad_button_selected_color">@color/pf_purple</item>
+
+        <item name="number_pad_button">@style/number_pad_button</item>
+        <item name="number_pad_button_image_background_color">@color/white</item>
+        <item name="number_pad_backspace_button_image_color">@color/pf_dark_grey</item>
+        <item name="number_pad_submit_button_image_color">@color/pf_dark_grey</item>
+    </style>
+</resources>

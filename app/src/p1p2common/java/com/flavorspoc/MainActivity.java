@@ -1,6 +1,7 @@
 package java.com.flavorspoc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +11,8 @@ import android.widget.Toast;
 
 import com.flavorspoc.BuildConfig;
 import com.flavorspoc.R;
-import com.flavorspoc.widget.Numberpad;
-import com.flavorspoc.widget.NumberpadModel;
+import com.flavorspoc.widget.NumberPad;
+import com.flavorspoc.widget.NumberPadModel;
 
 public class MainActivity extends AppCompatActivity {
     View mainView;
@@ -23,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             TextView textView = (TextView) v;
-            final NumberpadModel numberpadModel = new NumberpadModel(Float.parseFloat(speed.getText().toString()),0.0f, 25.0f, 2);
-            Numberpad numPad = new Numberpad(mainView.getContext());
+            final NumberPadModel numberPadModel = new NumberPadModel(Float.parseFloat(speed.getText().toString()),0.0f, 25.0f, 2, true, true, true);
+            NumberPad numPad = new NumberPad(mainView.getContext());
             numPad.init(mainView,
-                    numberpadModel,
-                    cl -> {textView.setText(Float.toString(numberpadModel.getValue()));
+                    numberPadModel,
+                    cl -> {textView.setText(Float.toString(numberPadModel.getValue()));
                            numPad.hide();
                     }
             );
@@ -39,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_main);
 
         mainView = findViewById(R.id.main_view);
         flavor1SpecificDialog = findViewById(R.id.platform1SpecificDialog);
         speed = findViewById(R.id.speed);
-        submit = findViewById(R.id.submit);
+        submit = findViewById(R.id.number_pad_submit);
     }
 
     @Override

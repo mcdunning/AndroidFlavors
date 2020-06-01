@@ -2,7 +2,7 @@
     <string name="app_name">FlavorsPOC</string>
 
     <string name="flavor_name_title">Common Flavor</string>
-    <string name="submit">SUBMIT</string>
+    <string name="submit_uc">SUBMIT</string>
 
     <!-- NumberPad Widget Specific Values -->
     <string name="nine">9</string>
@@ -16,6 +16,8 @@
     <string name="one">1</string>
     <string name="zero">0</string>
     <string name="decimal_point">.</string>
+    <string name="backspace">Backspace</string>
+    <string name="submit">Submit</string>
 
     <!-- Units -->
     <string name="speed_imperial_uc">MPH</string>

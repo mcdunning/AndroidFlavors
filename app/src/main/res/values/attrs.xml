@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonAttrs">
+        <attr name="gradient_background_start_color" format="reference" />
+        <attr name="gradient_background_end_color" format="reference" />
+
+        <attr name="rounded_container_fill_color" format="reference" />
+        <attr name="rounded_container_radius" format="reference" />
+
+        <attr name="button_image_color" format="reference" />
+        <attr name="button_background" format="reference" />
+        <attr name="button_corner_radius" format="reference" />
+        <attr name="button" format="reference" />
+
+    </declare-styleable>
+
+    <!-- Activity Attrs -->
+    <declare-styleable name="Activity">
+        <attr name="activity_main_view" format="reference" />
+        <attr name="activity_heading_text" format="reference" />
+        <attr name="activity_subheading_text" format="reference" />
+        <attr name="button" />
+        <attr name="button_background" />
+        <attr name="button_image_color" />
+    </declare-styleable>
+</resources>
