@@ -14,7 +14,8 @@
         <attr name="number_pad_button_color" format="reference" />
         <attr name="number_pad_button" format="reference" />
         <attr name="number_pad_button_image_background_color" format="reference" />
-        <attr name="number_pad_button_image_color" format="reference" />
+        <attr name="number_pad_backspace_button_image_color" format="reference" />
+        <attr name="number_pad_submit_button_image_color" format="reference" />
 
     </declare-styleable>
 </resources>

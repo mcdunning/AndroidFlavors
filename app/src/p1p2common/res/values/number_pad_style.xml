@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="number_pad_main_view">
+        <item name="android:background">@drawable/gradient_background</item>
+    </style>
+
+    <style name="number_pad_value">
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textColor">@color/keypad_button</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:gravity">center|end</item>
+    </style>
+
+    <style name="number_pad_backspace" parent="number_pad_button" >
+        <item name="android:background">@drawable/number_pad_button_delete</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="number_pad_submit" parent="number_pad_button">
+        <item name="android:background">@drawable/number_pad_button_confirm</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="number_pad_button">
+        <item name="android:background">@drawable/number_pad_button_background</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

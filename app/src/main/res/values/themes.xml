@@ -27,6 +27,7 @@
 
         <item name="number_pad_button">@style/number_pad_button</item>
         <item name="number_pad_button_image_background_color">@color/cb_orange_75</item>
-        <item name="number_pad_button_image_color">@color/white</item>
+        <item name="number_pad_backspace_button_image_color">@color/white</item>
+        <item name="number_pad_submit_button_image_color">@color/white</item>
     </style>
 </resources>

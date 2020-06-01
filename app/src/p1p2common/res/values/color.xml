@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="keypad_button">#FFCCCCCC</color>
+    <color name="keypad_button_selected">#FF777777</color>
+    <color name="keypad_default_background">#99FFFFFF</color>
+    <color name="keypad_submit_button_image_color">#FF009245</color>
+</resources>
